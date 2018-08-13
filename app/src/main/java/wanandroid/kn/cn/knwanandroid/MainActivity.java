@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
         initData();
         initView();
-        initTabLayout();
     }
 
 
@@ -59,12 +58,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for (int i = 0; i < mTitles.length; i++) {
             customTabEntities.add(new MainTabEntity(mTitles[i], mIconSelectIds[i], mIconUnSelectIds[i]));
         }
-
     }
 
     private void initView() {
         setting.setOnClickListener(this);
         exit_App.setOnClickListener(this);
+        initTabLayout();
         commonTabLayout.setOnTabSelectListener(this);
         initViewPager();
     }

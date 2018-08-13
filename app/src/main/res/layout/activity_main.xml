@@ -5,10 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#11ff0000"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    android:layout_height="match_parent">
     <!--fitsSystemWindows="true";  作用-->
     <!--具体的作用就是你的contentview是否忽略actionbar,title,屏幕的底部虚拟按键，-->
     <!--将整个屏幕当作可用的空间。正常情况，contentview可用的空间是去除了actionbar,title,-->
@@ -23,18 +20,18 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <include layout="@layout/base_title_bar" />
+        <!--<include layout="@layout/base_title_bar" />-->
 
         <android.support.v4.view.ViewPager
             android:id="@+id/vp_home"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1" />
 
         <dagger2.itcast.cn.flycotablayout.CommonTabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dim60"
+            android:layout_height="@dimen/dim90"
             android:background="#90ffffff"
             tl:tl_iconHeight="23dp"
             tl:tl_iconWidth="23dp"
